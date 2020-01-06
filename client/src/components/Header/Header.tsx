@@ -57,7 +57,7 @@ class Header extends React.Component<Props> {
       <div className="header">
         <AppBar 
           className="title"
-          title="MOBILE SHOP"
+          title="LAPTOP SHOP"
           onTitleClick={() => history.push('/')}
           showMenuIconButton={false}
           zDepth={0}
@@ -65,6 +65,11 @@ class Header extends React.Component<Props> {
             loggedUser ?
               <div>
                 <div className="menu">
+                <FlatButton
+                    style={styles.menuBtn}
+                    label="ABOUT"
+                    containerElement={<Link to="/about" />}
+                  />
                   <FlatButton
                     style={styles.menuBtn}
                     label="ACCOUNT"
@@ -91,6 +96,10 @@ class Header extends React.Component<Props> {
                     targetOrigin={{ horizontal: 'right', vertical: 'top' }}
                     iconStyle={{ color: '#fff' }}
                   >
+                    <FlatButton
+                      label="ABOUT"
+                      containerElement={<Link to="/about" />}
+                    /><br />
                     <FlatButton
                       label="ACCOUNT"
                       icon={<Person />}

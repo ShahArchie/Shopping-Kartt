@@ -9,6 +9,7 @@ import ProductDetails from '../ProductDetails';
 import Footer from '../Footer';
 import NotFound from '../NotFound';
 import '@styles/ShoppingCart.css';
+import About from '../About';
 
 const ShoppingCart = () => (
   <BrowserRouter>
@@ -17,6 +18,7 @@ const ShoppingCart = () => (
         <Route component={Header} />
         <Switch>
           <Route exact path="/" component={Homepage} />
+          <Route path="/about" component={About} />
           <Route path="/account" component={Account} />
           <Route path="/cart" component={Cart} />
           <Route path="/product/:id" component={ProductDetails} />
